@@ -1,0 +1,333 @@
+/* Custom styles.css */
+/* Custom styles.css (if you prefer a separate file) */
+
+/* General body styling */
+body {
+    background-image: url('2_1.png'); /* Update with the correct path */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+header .logo {
+    display: block;
+    position: absolute; /* Positions the logo absolutely within the header */
+    top: 0; /* Positions the logo at the top of the header */
+    left: 0; /* Positions the logo at the left of the header */
+    max-width: 250px; /* Maximum width of the logo, adjust as needed */
+    height: auto; /* Keeps the aspect ratio of the logo */
+}
+
+.sidebar {
+    margin-top: 20px; /* This adds space above the sidebar, pushing it down */
+    /* Other styles for your sidebar */
+}
+.sidebar {
+    margin-top: 4em; /* Relative to the font-size of the element */
+    /* or */
+    margin-top: 12vh; /* 5% of the viewport height */
+    /* Other styles for your sidebar */
+}
+
+/* Your other styles... */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Allow the main content to grow and push the footer down */
+.main-content {
+    margin-left: 250px;
+    margin-top: 20px;
+    flex-grow: 1; /* Takes up the remaining width */
+    padding: 50px; /* Adjust as needed */
+    display: flex; /* To center-align the child content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto; /* Scroll if content is too long */
+}
+.tool-section {
+    width: 500px; /* Set the width of the form */
+    margin: 0 auto; /* Center the form in the available space */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 4rem 1rem; /* Adjusted padding for better spacing */
+    background-color: #1E40AF; /* Example color */
+    color: white;
+    box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.2);
+}
+/* Continue with the rest of your styles... */
+
+
+/* General body styling */
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+/* Add additional styles here */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+/* Style for the form in Margin Calculator */
+#marginForm {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+#marginForm input {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#marginForm select {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    background: #635bfb(99,91,251,255); /* For visibility against a potentially busy background */
+}
+
+#marginForm button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1.5px solid #190ac0;
+    border-radius: 4px;
+    background-color: #635bfb;
+    text-align: center;
+    font-weight: bold;
+}
+#marginForm button:hover {
+    background-color: #524ce2; /* Darker shade for hover state */
+}
+
+/* Style for result display */
+#marginResult {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+}
+/* Main Section Title Styles */
+.section-title {
+    text-align: center; /* Center the text */
+    color: #ffffff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for legibility */
+    font-size: 2rem; /* Larger font size for visibility */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px; /* Padding inside the title */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Box shadow for depth */
+    display: inline-block; /* Only as wide as it needs to be */
+    margin: 20px auto; /* Center the block horizontally with auto margins */
+}
+
+
+.section-title {
+    /* Text styling */
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Shadow for legibility */
+    font-size: 2.5rem; /* Large font size */
+    font-weight: bold; /* Bold font weight */
+
+    /* Flexbox centering */
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+    /* Spacing */
+    margin: 0; /* Reset margin */
+    padding: 1em; /* Padding for spacing inside the border */
+
+    /* Decorative */
+    border: 2px solid #ffffff; /* White border for visibility */
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+
+    /* Full width and allow height to be determined by content */
+    width: 100%; /* Take full width */
+    height: auto; /* Height is automatic */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.5rem; /* Smaller font size on mobile devices */
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Less pronounced text shadow */
+        padding: 0.5em; /* Adjust padding on smaller screens */
+    }
+}
+/* Sidebar Styles */
+.sidebar {
+    width: 250px; /* Fixed width */
+    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
+    color: white;
+    padding: 20px;
+    height: 100vh; /* Full height of viewport */
+    overflow-y: auto; /* Scrollable if content overflows */
+    position: fixed; /* Fixed position */
+    left: 0; /* Align to the left */
+    top: 0; /* Align to the top */
+}
+
+/* Sidebar Links Styles */
+.sidebar-link {
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff; /* White text color */
+    background: rgba(255, 255, 255, 0.1); /* Slightly lighter background for links */
+    margin: 5px 0; /* Spacing between links */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 255, 255, 0.2); /* Lighter background on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    color: #635bfb; /* Change text color on hover, if desired */
+}
+
+
+/* Style for the Risk Calculator form */
+#riskForm {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#riskForm input, #riskForm select {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#riskOutputs {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+#riskForm button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1.5px solid #190ac0;
+    border-radius: 4px;
+    background-color: #635bfb;
+    font-weight: bold;
+    text-align: center;
+}
+#riskForm button:hover {
+    background-color: #524ce2; /* Darker shade for hover state */
+}
+#RiskResult {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
+}
+/* Pip Calculator Styles */
+#pipForm {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for form */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#pipForm input[type="number"],
+#pipForm select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+}
+
+#pipForm button {
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid #190ac0;
+    border-radius: 4px;
+    background-color: #635bfb;
+    text-align: center;
+    font-weight: bold;
+}
+
+#pipForm button:hover {
+    background-color: #524ce2; /* Darker shade for hover state */
+}
+
+#pipResult {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-weight: bold;
+}
+
+/* Additional responsive adjustments for Pip Calculator */
+@media (max-width: 768px) {
+    #pipForm {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
