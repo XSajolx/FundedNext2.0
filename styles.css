@@ -273,61 +273,81 @@ body {
     max-width: 450px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     text-align: center;
     font-weight: bold;
 }
 /* Pip Calculator Styles */
-#pipForm {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for form */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-#pipForm input[type="number"],
-#pipForm select {
+/* Style for the select dropdown */
+#instrument {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
+    margin-bottom: 10px; /* Adjust margin to create space between elements */
+    border: 2px solid #ccc; /* Light gray border for separation */
     border-radius: 4px;
+    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
+    font-size: 16px;
     text-align: center;
+    font-weight: bold;
 }
 
-#pipForm button {
-    width: 100%;
+/* Style for the input fields */
+input[type="number"] {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the form button */
+button[type="submit"] {
+    width: calc(100% - 20px);
     padding: 10px;
     border: 1.5px solid #190ac0;
     border-radius: 4px;
     background-color: #635bfb;
+    font-weight: bold;
     text-align: center;
     font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
-#pipForm button:hover {
-    background-color: #524ce2; /* Darker shade for hover state */
-}
-
-#pipResult {
-    text-align: center;
-    margin-top: 15px;
+button[type="submit"]:hover {
+    width: calc(100% - 20px);
     padding: 10px;
+    border: 1.5px solid #190ac0;
+    border-radius: 4px;
+    background-color: #635bfb;
+    font-weight: bold;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styling for the form container */
+.pip-form {
+    margin-top: 20px;
+    padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
     font-weight: bold;
 }
 
-/* Additional responsive adjustments for Pip Calculator */
-@media (max-width: 768px) {
-    #pipForm {
-        width: 90%;
-        margin: 20px auto;
-    }
+/* Style for the result display */
+#pipResult {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
 }
