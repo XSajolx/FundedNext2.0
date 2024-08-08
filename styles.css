@@ -236,8 +236,8 @@ body {
     padding: 20px;
     background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 #riskForm input, #riskForm select {
@@ -267,13 +267,19 @@ body {
     text-align: center;
 }
 #riskForm button:hover {
-    background-color: #524ce2; /* Darker shade for hover state */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-weight: bold;
 }
 #RiskResult {
     max-width: 450px;
     margin: 20px auto;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -301,7 +307,6 @@ input[type="number"] {
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
-    font-weight: bold;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
@@ -312,10 +317,8 @@ button[type="submit"] {
     border: 1.5px solid #190ac0;
     border-radius: 4px;
     background-color: #635bfb;
-    font-weight: bold;
     text-align: center;
     font-weight: bold;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 button[type="submit"]:hover {
@@ -324,26 +327,25 @@ button[type="submit"]:hover {
     border: 1.5px solid #190ac0;
     border-radius: 4px;
     background-color: #635bfb;
-    font-weight: bold;
     text-align: center;
     font-weight: bold;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 /* Additional styling for the form container */
 .pip-form {
-    margin-top: 20px;
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* For visibility against a potentially busy background */
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-weight: bold;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
 }
 
 /* Style for the result display */
 #pipResult {
-    margin-top: 20px;
+    max-width: 450px;
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
