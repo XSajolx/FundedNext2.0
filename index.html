@@ -5,6 +5,15 @@
     <title>FundedNext Tools</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Include Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Include Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </head>
 <body class="bg-gray-100 font-sans">
     <div class="page-container">
@@ -35,6 +44,7 @@
                         <option value="Express">Express</option>
                         <option value="Stellar 1 step">Stellar 1 step</option>
                         <option value="Stellar 2 step">Stellar 2 step</option>
+                        <option value="Stellar Lite">Stellar Lite</option>
                     </select>
                 
                     <!-- Dropdown for Phase -->
@@ -51,6 +61,9 @@
                         <option value="indices">Indices</option>
                         <option value="commodities">Commodities</option>
                         <option value="XAGUSD">XAGUSD</option>
+                        <option value="ADAUSD/LNKUSD/XLMUSD/XRPUSD">ADAUSD/LNKUSD/XLMUSD/XRPUSD</option>
+                        <option value="BCHUSD/BTCUSD/ETHUSD/LTCUSD/XRPUSD">BCHUSD/BTCUSD/ETHUSD/LTCUSD/XRPUSD</option>
+                        <option value="DOGUSD">DOGUSD</option>
                     </select>
                 
                     <!-- Continue with other input fields -->
@@ -64,7 +77,7 @@
                 <h2 class="section-title">Profit/Loss Calculator</h2>
                 <!-- Content for Pip Calculator -->
                 <form id="pipForm" class="pip-form" onsubmit="calculateProfit(event)">
-                    <select id="instrument" required>
+                    <select id="instrument" class="select2" required>
                             <!-- Currencies -->
                             <option value="Select a pair">Select a pair</option>
                             <option value="AUDCAD">AUDCAD</option>
@@ -135,13 +148,25 @@
                             <option value="SWI20">SWI20</option>
                             <option value="UK100">UK100</option>
                             <option value="US30">US30</option>
-                        </select>                        
-                        <!-- Option values will be populated with JavaScript -->
-                        <input type="number" id="pips" step="0.01" placeholder="Number of pips" required />
-                        <input type="number" id="lots" step="0.01" placeholder="Number of lots" required />
-                        <button type="submit">Calculate</button>
-                        <div id="pipResult">Profit/Loss: $<span id="resultValue"></span></div>
-                    </form>
+                            <!-- Cryptocurrencies -->
+                            <option value="ADAUSD">ADAUSD</option>
+                            <option value="BCHUSD">BCHUSD</option>
+                            <option value="BTCUSD">BTCUSD</option>
+                            <option value="DOGUSD">DOGUSD</option>
+                            <option value="ETHUSD">ETHUSD</option>
+                            <option value="LNKUSD">LNKUSD</option>
+                            <option value="LTCUSD">LTCUSD</option>
+                            <option value="XLMUSD">XLMUSD</option>
+                            <option value="XMRUSD">XMRUSD</option>
+                            <option value="XRPUSD">XRPUSD</option>
+                            </select>                        
+                            <!-- Option values will be populated with JavaScript -->
+                            <input type="number" id="Price1" step="0.000001" placeholder="Entry Price" required />
+                            <input type="number" id="Price2" step="0.000001" placeholder="Exit Price" required />
+                            <input type="number" id="lots" step="0.01" placeholder="Number of lots" required />
+                            <button type="submit">Calculate</button>
+                            <div id="pipResult">Profit/Loss: $<span id="resultValue"></span></div>
+                        </form>
             </section>
             <section id="riskCalculator" class="tool-section hidden">
                 <h2 class="section-title">Risk Calculator</h2>
@@ -217,6 +242,18 @@
                         <option value="SWI20">SWI20</option>
                         <option value="UK100">UK100</option>
                         <option value="US30">US30</option>
+                        Here are the options formatted similarly for the cryptocurrencies listed in the image:
+                        <!-- Cryptocurrencies -->
+                        <option value="ADAUSD">ADAUSD</option>
+                        <option value="BCHUSD">BCHUSD</option>
+                        <option value="BTCUSD">BTCUSD</option>
+                        <option value="DOGUSD">DOGUSD</option>
+                        <option value="ETHUSD">ETHUSD</option>
+                        <option value="LNKUSD">LNKUSD</option>
+                        <option value="LTCUSD">LTCUSD</option>
+                        <option value="XLMUSD">XLMUSD</option>
+                        <option value="XMRUSD">XMRUSD</option>
+                        <option value="XRPUSD">XRPUSD</option>
                     </select>
                     <input type="number" id="accountBalance" placeholder="Account Balance" required />
                     <input type="number" id="riskPercentage" placeholder="Risk Percentage (1 for 1%)" required />
