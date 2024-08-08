@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'XAUUSD': 100, 'XTIUSD': 1000, 'XAGUSD': 5000, 'USOUSD': 100,
         'UKOUSD': 100,
         // Crypto
-        'ADAUSD': 100, 'BCHUSD': 1, 'BTCUSD': 10, 'DOGUSD': 1000, 'ETHUSD': 1,
+        'ADAUSD': 100, 'BCHUSD': 1, 'BTCUSD': 1, 'DOGUSD': 1000, 'ETHUSD': 1,
         'LNKUSD': 100, 'LTCUSD': 1, 'XLMUSD': 100, 'XMRUSD': 1, 'XRPUSD': 1000
     };
 
