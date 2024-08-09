@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     $('.select2').select2({
-        placeholder: "Select an option",
+        placeholder: "Select a pair",
         allowClear: true
     });
 
