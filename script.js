@@ -166,9 +166,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const pipDifference = (Price1 - Price2);
         let profitLoss;
 
-            if (tradeType === "sell") {
+            if (tradeType === "buy") {
                 profitLoss = pipDifference < 0 ? "Loss" : "Profit";
-            } else if (tradeType === "buy") {
+            } else if (tradeType === "sell") {
                 profitLoss = pipDifference > 0 ? "Profit" : "Loss";
             }
             const result = calculateProfitLoss((pipDifference), lotSize, instrument);
