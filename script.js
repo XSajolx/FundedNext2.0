@@ -163,15 +163,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        const pipDifference = (Price1 - Price2);
+       const pipDifference = (Price1 - Price2);
         let profitLoss;
 
             if (tradeType === "buy") {
-                profitLoss = pipDifference > 0 ? "Loss" : "Profit";
+                profitLoss = pipDifference >= 0 ? "Loss" : "Profit";
             } else if (tradeType === "sell") {
-                profitLoss = pipDifference > 0 ? "Profit" : "Loss";
+                profitLoss = pipDifference >= 0 ? "Profit" : "Loss";
             }
-            const result = calculateProfitLoss((pipDifference), lotSize, instrument);
+            const result = calculateProfitLoss(Math.abs(pipDifference), lotSize, instrument);
             document.getElementById('resultValue').textContent = `${profitLoss}: $${result}`;
         }
 
