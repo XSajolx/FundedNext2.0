@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
         'USDNOK': 9000, 'USDPLN': 24200, 'USDSGD': 73600, 'USDTRY': 35000,
         'USDZAR': 5300, 'ZARJPY': 661, 'NZDUSD': 100000,
         // Indices
-        'SPX500': 100, 'US30': 100, 'GER30': 106.7, 'US2000': 100,
-        'UK100': 122, 'VIX': 100, 'SWI20': 110.8, 'NTH25': 213.4,
-        'NDX100': 100, 'JP225': 0.07, 'HK50': 12.8, 'FRA40': 106.7,
-        'EUSTX50': 106.7, 'AUS200': 63.5,'US2000':100,
+        'SPX500': 1000, 'US30': 1000, 'GER30': 1067, 'US2000': 1000,
+        'UK100': 1220, 'VIX': 1000, 'SWI20': 1108, 'NTH25': 2134,
+        'NDX100': 1000, 'JP225': 70, 'HK50': 128, 'FRA40': 1067,
+        'EUSTX50': 1067, 'AUS200': 6350,'US2000':1000,
         // Commodities
         'XAUUSD': 100, 'XTIUSD': 1000, 'XAGUSD': 5000, 'USOUSD': 100,
         'UKOUSD': 100,
