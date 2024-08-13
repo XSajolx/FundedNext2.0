@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let profitLoss;
 
             if (tradeType === "buy") {
-                profitLoss = pipDifference < 0 ? "Loss" : "Profit";
+                profitLoss = pipDifference > 0 ? "Loss" : "Profit";
             } else if (tradeType === "sell") {
                 profitLoss = pipDifference > 0 ? "Profit" : "Loss";
             }
