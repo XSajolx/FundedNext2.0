@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Indices
         'SPX500': 100, 'US30': 100, 'GER30': 106.7, 'US2000': 100,
         'UK100': 122, 'VIX': 100, 'SWI20': 110.8, 'NTH25': 213.4,
-        'NDX100': 100, 'JP225': 0.7, 'HK50': 12.8, 'FRA40': 106.7,
+        'NDX100': 100, 'JP225': 0.07, 'HK50': 12.8, 'FRA40': 106.7,
         'EUSTX50': 106.7, 'AUS200': 63.5,'US2000':100,
         // Commodities
         'XAUUSD': 100, 'XTIUSD': 1000, 'XAGUSD': 5000, 'USOUSD': 100,
