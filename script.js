@@ -17,17 +17,17 @@ document.addEventListener('DOMContentLoaded', function () {
         'SPX500': 100, 'US30': 100, 'GER30': 106.7, 'US2000': 100,
         'UK100': 122, 'VIX': 100, 'SWI20': 110.8, 'NTH25': 213.4,
         'NDX100': 100, 'JP225': 0.7, 'HK50': 12.8, 'FRA40': 106.7,
-        'EUSTX50': 106.7, 'AUS200': 63.5,
+        'EUSTX50': 106.7, 'AUS200': 63.5,'US2000':100,
         // Commodities
         'XAUUSD': 100, 'XTIUSD': 1000, 'XAGUSD': 5000, 'USOUSD': 100,
         'UKOUSD': 100,
         // Crypto
-        'ADAUSD': 100, 'BCHUSD': 1, 'BTCUSD': 1, 'DOGUSD': 1000, 'ETHUSD': 1,
+        'ADAUSD': 100, 'BCHUSD': 1, 'BTCUSD': 10, 'DOGUSD': 1000, 'ETHUSD': 1,
         'LNKUSD': 100, 'LTCUSD': 1, 'XLMUSD': 100, 'XMRUSD': 1, 'XRPUSD': 1000
     };
 
     $('.select2').select2({
-        placeholder: "Select a pair",
+        placeholder: "Select an option",
         allowClear: true
     });
 
@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const Price2 = parseFloat(document.getElementById('Price2').value);
         const lotSize = parseFloat(document.getElementById('lots').value);
         const instrument = document.getElementById('instrument').value;
+        const tradeType = document.getElementById('tradeType').value;
 
         if (instrument === "Select Currencies") {
             alert("Please select a currency pair or instrument.");
@@ -163,52 +164,66 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         const pipDifference = Math.abs(Price1 - Price2);
+        let profitLoss;
 
-        const result = calculateProfitLoss(pipDifference, lotSize, instrument);
-        document.getElementById('resultValue').textContent = result;
-    }
-
-    function calculateProfitLoss(pipDifference, lotSize, instrument) {
-        if (!pipValues[instrument]) {
-            return 'Invalid instrument';
+            if (tradeType === "buy") {
+                profitLoss = pipDifference >= 0 ? "Loss" : "Profit";
+            } else if (tradeType === "sell") {
+                profitLoss = pipDifference >= 0 ? "Profit" : "Loss";
+            }
+            const result = calculateProfitLoss(Math.abs(pipDifference), lotSize, instrument);
+            document.getElementById('resultValue').textContent = `${profitLoss}: $${result}`;
         }
 
-        const pipValue = pipValues[instrument];
-        const profitLoss = pipDifference * lotSize * pipValue;
+        function calculateProfitLoss(pipDifference, lotSize, instrument) {
+            if (!pipValues[instrument]) {
+                return 'Invalid instrument';
+            }
 
-        return profitLoss.toFixed(2);
-    }
+            const pipValue = pipValues[instrument];
+            const profitLoss = pipDifference * lotSize * pipValue;
 
-    function calculateForexRisk() {
-        const instrument = document.getElementById('riskInstrument').value;
-        const accountBalance = parseFloat(document.getElementById('accountBalance').value);
-        const riskPercentage = parseFloat(document.getElementById('riskPercentage').value);
-        const stopLoss = parseFloat(document.getElementById('stopLoss').value);
-
-        if (instrument === "Select a pair" || !pipValues.hasOwnProperty(instrument)) {
-            alert('Please select a valid instrument.');
-            return;
+            return profitLoss.toFixed(2);
         }
 
-        if (isNaN(accountBalance) || accountBalance <= 0) {
-            alert('Please enter a valid account balance.');
-            return;
+        function calculateForexRisk() {
+            const instrument = $('#riskInstrument').val();
+            const accountBalance = parseFloat($('#accountBalance').val());
+            const riskPercentage = parseFloat($('#riskPercentage').val());
+            const entryPrice = parseFloat($('#entryPrice').val());
+            const exitPrice = parseFloat($('#exitPrice').val());
+
+            if (instrument === "Select a pair" || !pipValues.hasOwnProperty(instrument)) {
+                alert('Please select a valid instrument.');
+                return;
+            }
+
+            if (isNaN(accountBalance) || accountBalance <= 0) {
+                alert('Please enter a valid account balance.');
+                return;
+            }
+
+            if (isNaN(riskPercentage) || riskPercentage <= 0 || riskPercentage > 100) {
+                alert('Please enter a valid risk percentage (1-100).');
+                return;
+            }
+
+            if (isNaN(entryPrice) || isNaN(exitPrice)) {
+                alert('Please enter valid entry and exit prices.');
+                return;
+            }
+
+            const pipDifference = Math.abs(exitPrice - entryPrice);
+            const pipValue = pipDifference * pipValues[instrument];
+            const amountAtRisk = accountBalance * (riskPercentage / 100);
+            const positionSize = amountAtRisk / pipValue;
+
+            $('#riskValue').text(positionSize.toFixed(2));
+            $(document).ready(function() {
+                // Initialize Select2 for all select elements with the class 'select2'
+                $('.select2').select2();
+    
+                // Add your other custom JavaScript here
+            });
         }
-
-        if (isNaN(riskPercentage) || riskPercentage <= 0 || riskPercentage > 100) {
-            alert('Please enter a valid risk percentage (1-100).');
-            return;
-        }
-
-        if (isNaN(stopLoss) || stopLoss <= 0) {
-            alert('Please enter a valid stop loss value.');
-            return;
-        }
-
-        const pipValue = pipValues[instrument];
-        const amountAtRisk = accountBalance * (riskPercentage / 100);
-        const positionSize = amountAtRisk / (stopLoss * pipValue);
-
-        document.getElementById('riskValue').textContent = positionSize.toFixed(2);
-    }
 });
