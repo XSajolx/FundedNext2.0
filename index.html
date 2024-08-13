@@ -42,8 +42,8 @@
                         <option value="">Select Account Model</option>
                         <option value="Evaluation">Evaluation</option>
                         <option value="Express">Express</option>
-                        <option value="Stellar 1 step">Stellar 1-Step</option>
-                        <option value="Stellar 2 step">Stellar 2-Step</option>
+                        <option value="Stellar 1 step">Stellar 1 step</option>
+                        <option value="Stellar 2 step">Stellar 2 step</option>
                         <option value="Stellar Lite">Stellar Lite</option>
                     </select>
                 
@@ -143,6 +143,8 @@
                             <option value="GER30">GER30</option>
                             <option value="HK50">HK50</option>
                             <option value="SPX500">SPX500</option>
+                            <option value="US2000">US2000</option>
+                            <option value="JP225">JP225</option>
                             <option value="NDX100">NDX100</option>
                             <option value="NTH25">NTH25</option>
                             <option value="SWI20">SWI20</option>
@@ -159,20 +161,25 @@
                             <option value="XLMUSD">XLMUSD</option>
                             <option value="XMRUSD">XMRUSD</option>
                             <option value="XRPUSD">XRPUSD</option>
-                            </select>                        
+                            </select>   
+                        </select><br><br>
+                        <select id="tradeType">
+                            <option value="buy">Buy</option>
+                            <option value="sell">Sell</option>
+                        </select><br><br>                     
                             <!-- Option values will be populated with JavaScript -->
                             <input type="number" id="Price1" step="0.000001" placeholder="Entry Price" required />
                             <input type="number" id="Price2" step="0.000001" placeholder="Exit Price" required />
                             <input type="number" id="lots" step="0.01" placeholder="Number of lots" required />
                             <button type="submit">Calculate</button>
-                            <div id="pipResult">Profit/Loss: $<span id="resultValue"></span></div>
+                            <div id="pipResult"><span id="resultValue"></span></div>
                         </form>
             </section>
             <section id="riskCalculator" class="tool-section hidden">
                 <h2 class="section-title">Risk Calculator</h2>
                 <!-- Content for Risk Calculator -->
                 <form id="riskForm" class="risk-form">
-                    <select id="riskInstrument">
+                    <select id="riskInstrument" class="select2 w-full p-2 border rounded">
                         <option value="Select a pair">Select a pair</option>
                         <option value="AUDCAD">AUDCAD</option>
                         <option value="AUDCHF">AUDCHF</option>
@@ -233,8 +240,10 @@
                         <option value="USOUSD">USOUSD</option>
                         <option value="AUS200">AUS200</option>
                         <option value="EUSTX50">EUSTX50</option>
+                        <option value="US2000">US2000</option>
                         <option value="FRA40">FRA40</option>
                         <option value="GER30">GER30</option>
+                        <option value="JP225">JP225</option>
                         <option value="HK50">HK50</option>
                         <option value="SPX500">SPX500</option>
                         <option value="NDX100">NDX100</option>
@@ -257,7 +266,8 @@
                     </select>
                     <input type="number" id="accountBalance" placeholder="Account Balance" required />
                     <input type="number" id="riskPercentage" placeholder="Risk Percentage (1 for 1%)" required />
-                    <input type="number" id="stopLoss" placeholder="Stop Loss in Pips" required />
+                    <input type="number" id="entryPrice" step="0.000001" placeholder="Entry Price" required />
+                    <input type="number" id="exitPrice" step="0.000001" placeholder="Exit Price" required />
                     <button type="button" id="calculateForexRisk">Calculate</button>
                     <div id="riskResult">Position Size in lots: <span id="riskValue"></span></div>
                 </form>
