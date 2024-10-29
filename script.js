@@ -117,8 +117,8 @@ document.addEventListener('DOMContentLoaded', function () {
         let contractSize = contractSizes[assetType];
 
         const leverageMapping = {
-            'Evaluation': {'forex': [100, 100], 'indices': [50, 25], 'commodities': [50, 50], 'crypto': [2, 2]},
-            'Express': {'forex': [100, 100], 'indices': [50, 25], 'commodities': [50, 50], 'crypto': [2, 2]},
+            'Evaluation': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [2, 2]},
+            'Express': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [2, 2]},
             'Stellar 1 step': {'forex': [30, 30], 'indices': [5, 5], 'commodities': [10, 10], 'crypto': [2, 2]},
             'Stellar 2 step': {'forex': [100, 100], 'indices': [20, 20], 'commodities': [40, 40], 'crypto': [2, 2]},
             'Stellar Lite': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [2, 2]}
