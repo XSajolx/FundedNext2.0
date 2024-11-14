@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'Evaluation': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [1, 1]},
             'Express': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [1, 1]},
             'Stellar 1 step': {'forex': [30, 30], 'indices': [5, 5], 'commodities': [10, 10], 'crypto': [1, 1]},
-            'Stellar 2 step': {'forex': [100, 100], 'indices': [20, 20], 'commodities': [40, 40], 'crypto': [1, 1]},
+            'Stellar 2 step': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [1, 1]},
             'Stellar Lite': {'forex': [100, 100], 'indices': [15, 15], 'commodities': [25, 25], 'crypto': [1, 1]}
         };
 
